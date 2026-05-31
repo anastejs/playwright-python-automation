@@ -1,0 +1,14 @@
+06 - Playwright - глобальная установка
+С компьютера вне виртуальной среды зайти в обычный терминал
+1. pip install playwright
+2. playwright install
+3. (не смогла сделать)
+$env:PLAYWRIGHT_BROWSER_PATH = "..."
+
+4. в папке самого проекта, находясь в виртуальной среде
+pip install pyinstaller
+5. pyinstaller 06_automated_mail_checker.py --onefile
+(после этого в проекте появятся новые папки и файлы, build и .spec можно удалить)
+6. перенести .exe файл из папки dist в общий проект и удалить папку dist
+7. запуск из терминала
+.\test.exe

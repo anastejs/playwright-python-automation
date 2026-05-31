@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Виртуальное окружение
+venv/
+.venv/
+
+# Pytest
+.pytest_cache/
+.cache/
+
+# Playwright — артефакты тестов
+playwright/.auth/
+
+# IDE
+.vscode/
+.idea/
+
+# Переменные окружения (на будущее)
+.env
+.env.*

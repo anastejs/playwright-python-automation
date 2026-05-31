@@ -1,0 +1,50 @@
+07 - Установка pytest с терминала, находясь в общей папке проекта в виртуальной среде (venv):
+
+pip install pytest 
+pytest --version    
+pytest test_utils.py  #обычный запуск
+pytest -v  test_utils.py #запуск с дополнительной информацией
+pytest -s  test_utils.py  #по умолчанию pytest не выписывает строки print(), -s - выводит в терминале
+
+08 - Работа с плагином playwright
+Одно из главных удобств Playwright pytest плагина, что он автоматически:
+запускает browser, создаёт context, создаёт page, закрывает всё после теста.
+
+pip install pytest-playwright           #плагин playwright для pytest
+#как запускать?
+pytest test.app или pytest или pytest --headed --headed --slowmo=500
+pytest --headed --browser=firefox --slowmo=500
+pytest -k test_root                     # запустить один определенный тест
+pytest --device="iPhone 14 Pro Max"     # протестить на определенном девайсе
+pytest --tracing on
+pytest --tracing off
+pytest --tracing retain-on-failure      # включить tracing для провальных тестов (сохраняется в папке test-results)
+pytest --video on                       # создание видео теста (сохраняется в папке test-results)
+pytest --screenshot on                  # создание скриншота после выполнения теста 
+pytest --screenshot-only-on-failure     # создание скриншота при провальном тесте 
+
+#!!! создать файл с конфигурацией pytest.ini, содержание например:
+[pytest]
+addopts = --headed --slowmo=500
+
+09 - Playwright Codegen — это инструмент, который автоматически генерирует Playwright-код по твоим действиям в браузере (клики, ввод текста, переходы и т.д.)
+чтобы запустить -> в терминале команда: playwright codegen playwright.dev
+
+16 - Запуск параллельного выполнения тестов (быстрее и оптимизированее)
+pip install pytest-xdist      # установка плагина внутри venv
+pytest --numprocesses auto    # (рекомендуется) сам решает, сколько процессов (workers) использовать (обычно = количество CPU)
+pytest -n 3                   # запустить тесты в 3 параллельных процессах (workers)
+
+17 - Создание html-reportов
+HTML Report — это отчёт о результатах выполнения тестов в виде HTML-страницы, которую можно открыть в браузере.
+Содержит количество тестов, Passed/Failed/Skipped, время выполнения, ошибки и stack trace, иногда скриншоты и логи
+
+pip install pytest-html     # установка плагина pytest-html
+pytest test_08_app_fixture.py --html=reports/report.html
+pytest . --html=reports/report.html           # для всех тестов сразу
+# для создания report.html при каждом запуске pytest - можно добавить в файл pytest.ini следующую строчку:
+addopts = --html=reports/report.html    
+
+-----------------------------------------------------------------
+Pytest — чистый testing framework
+Playwright — это browser automation framework (и частично library), предназначенный для E2E/UI тестирования через управление реальными браузерами.
