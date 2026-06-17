@@ -46,6 +46,10 @@ page.locator("id=btnGroupDrop1").highlight()
 page.locator("input[readonly]").highlight()
 page.locator("input[value='correct value']").highlight()
 page.locator("li[data-tooltip='Mark as read']").highlight()
+# with label and its id (example from another website)
+page.locator("css=label#loginstatus")
+# with class and text (example from another website)
+page.locator("div.bg-primary").get_by_text("Welcome")
 
 #parent child relationship
 page.locator("nav.bg-dark a.nav-link.active").highlight()

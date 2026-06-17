@@ -3,6 +3,8 @@ import report_07
 import pytest
 
 #создаём фикстуру, которая будет выполняться один раз для всех тестов в течении одной сессии (одного запуска pytest)
+# primary use of a pytest fixture in testing - is to share test data between tests
+
 #scope="function" - по умолчанию, выполняется для каждой отдельной функции (каждого теста)
 #scope="module" - выполняется один раз для всех тестов в одном файле
 @pytest.fixture(scope="session")      
