@@ -32,9 +32,7 @@ playwright-python-automation/
 │                                       playwright's fixtures, Browser vs Context vs Page, page.route(),
 │                                       network events, optimization, python debugger breakpoint(), 
 ├───┐                                   device emulation, data-driven testing @pytest.mark.parametrize() 
-│   ├── reports/
-│   └── videos/
-├── videos/
+│   └── reports/ 
 ├── .gitignore
 ├── requirements.txt
 └── README.md
