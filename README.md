@@ -126,7 +126,7 @@ pytest -s test_utils.py     # по умолчанию pytest не выписыв
 pip install pytest-playwright           # плагин playwright для pytest
 
 # как запускать?
-pytest test.app или pytest или pytest --headed --headed --slowmo=500
+pytest test.app или pytest или pytest --headed --slowmo=500
 pytest --headed --browser=firefox --slowmo=500
 pytest -k test_root                     # запустить один определенный тест
 pytest --device="iPhone 14 Pro Max"     # протестить на определенном девайсе
