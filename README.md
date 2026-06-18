@@ -14,6 +14,7 @@
 A hands-on test automation project built with **Playwright + Python**, covering core QA engineering practices — pytest fundamentals, browser automation, parallel execution, HTML reporting, playwright's interactive REPL mode, API testing, Page Object Model, and much more.
 
 > **Pytest —** чистый testing framework
+>
 > **Playwright —** это browser automation framework (и частично library), предназначенный для E2E/UI тестирования через управление реальными браузерами.
 
 ## 📁 Project Structure
